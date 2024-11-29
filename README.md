@@ -9,9 +9,10 @@ Executes `scripts/<repo_name>.sh` script when a push event is received.
 ## Configuration
 
 ```
+# Defaults
 PORT=5000
-GITHUB_SECRET=<webhook secret>
-SCRIPTS_DIR=./scripts
+GITHUB_SECRET=foobar
+SCRIPTS_DIR=<repo dir>/scripts
 ```
 
 ## Usage
