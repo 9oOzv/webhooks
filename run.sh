@@ -12,4 +12,8 @@ source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 
+if [ -f 'env.sh' ]; then
+    . env.sh
+fi
+
 waitress-serve --port="${PORT-5000}" 'hooks:app'

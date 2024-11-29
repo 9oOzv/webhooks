@@ -1,0 +1,14 @@
+[Unit]
+Description=Webhooks service
+After=network.target
+
+[Service]
+Type=exec
+User=webhooks
+Group=webhooks
+ExecStart=/srv/webhooks/run.sh
+Restart=on-failure
+RestartSec=300
+
+[Install]
+WantedBy=multi-user.target
