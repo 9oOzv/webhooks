@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+dirs="$@"
+
+for d in "${dirs[@]}"; do
+    pushd "$d" > /dev/null
+    git fetch
+    git reset --hard @{u}
+    popd > /dev/null
+done
